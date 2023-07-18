@@ -1,0 +1,227 @@
+@charset "urf-8";
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@keyframes autoplay
+{
+    0% {visibility: visible; opacity: 0; height: 400px;}
+    5% {visibility: visible; opacity: 1; height: 400px;}
+    24% {visibility: visible; opacity: 1; height: 400px;}
+    25% { visibility: hidden; display: none; opacity: 0; height: 0px;}
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+html, body
+{
+    height: 100%;
+}
+
+    body
+    {
+        font-family: Helvetica, sans-serif;
+        margin: 0px;
+    }
+ 
+    div.mainContent
+    {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;;
+        align-items: stretch;
+    }
+
+            header
+            {
+                height: 80px;
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                background: rgb(211, 224, 231);
+            }
+
+                header nav
+                {
+                    width: 500px;
+                    height: 10%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+
+                    div.logo
+                    {
+                        font-family:'Dancing Script', cursive;
+                        font-size: 20px;
+                        color: rgb(78, 90, 95);
+                    }                   
+
+                main
+                {
+                    flex-grow: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
+                }
+
+                main div.gallery
+                {
+                    min-height: 450px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    overflow: hidden;
+                }
+
+                    main div.gallery img{
+                        visibility: hidden;
+                        height: 0px;
+                        box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, .5);
+                        margin: 10px 15px;
+                        border-radius: 5px;
+                        animation: 24s autoplay infinite;
+                        -webkit-transition: none !important;
+                        -moz-animation: none !important;
+                        -o-transition: none !important;
+                        transition: none !important;
+                    }
+
+                    main div.gallery img.one{
+                        animation-delay: 0s;
+                    }
+
+                    main div.gallery img.two{
+                        animation-delay: 8s;
+                    }
+
+                    main div.gallery img.three{
+                        animation-delay: 16s;
+                    }
+
+            section
+            {
+                width: 70%; 
+                height: auto;  
+                padding: 50px;
+                border-bottom: 1px solid #4f6d7aff;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            section div
+            {
+                width: 60%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            section form
+            {
+                width: 70%;
+                height: 100px;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                align-items: stretch;
+            }
+
+            section form div
+            {
+                width: 35%;
+                margin-right: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            section img
+            {
+                box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, .5);
+            }
+
+                    section form input[type=text], section form input[type=password]
+                    {
+                        height: 30px;
+                        padding: 10px;
+                        margin-bottom: 5px;
+                        font-size: 16px;
+                        border-color: rgb(78, 90, 95);
+                        border-radius: 5px;
+                        margin-right: 5px;
+                    }
+
+                    section form select
+                    {
+                        height: 50px;
+                        padding: 10px;
+                        margin-bottom: 5px;
+                        font-size: 16px;
+                        border-color: #4f6d7aff; 
+                        border-radius: 5px;
+                    }
+
+                    section form textarea
+                    {
+                        height: 250px;
+                        width: 90%;
+                        padding: 10px;
+                        margin-bottom: 5px;
+                        font-size: 16px;
+                        border-color: #4f6d7aff; 
+                        border-radius: 5px;
+                    }
+
+                    section form input[type=submit]
+                    {
+                        height: 50px;
+                        padding: 10px;
+                        margin-bottom: 5px;
+                        font-size: 16px;
+                        border: none;
+                        border-radius: 5px;
+                        background: rgb(78, 90, 95);
+                    }
+
+                div.adminPanel
+                {
+                    height: 80px;
+                    margin: auto;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+                    footer
+                    {
+                        height: 80px;
+                        padding: 10px;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        background: rgb(211, 224, 231);
+                    }
+        
+                        footer nav
+                        {
+                            width: 200px;
+                            height: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            align-items: flex-end;
+                        }   
+                    
+                        header, main, footer
+                        {
+                            flex-shrink: 0;
+                        }
